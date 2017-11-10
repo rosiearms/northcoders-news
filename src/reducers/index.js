@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
 import fetchArticlesReducer from './fetchArticlesReducer';
-import fetchTopicsReducer from './fetchTopicsReducer'
+import fetchTopicsReducer from './fetchTopicsReducer';
+import fetchArticlesByTopicReducer from './fetchArticlesByTopicReducer';
 
 const reducer = combineReducers({
-  fetchArticlesReducer, fetchTopicsReducer
+  fetchArticlesReducer, fetchTopicsReducer, fetchArticlesByTopicReducer
 });
 
 export default reducer;

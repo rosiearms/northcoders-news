@@ -1,12 +1,42 @@
 import React from 'react';
+import PT from 'prop-types';
+import { connect } from 'react-redux';
+import fetchArticlesByTopic from '../actions/fetchArticlesByTopic';
 
-class ArtcilesByTopic extends React.Component {
-  render () {
+class ArticlesByTopic extends React.Component {
+  componentDidMount() {
+    const topicName = this.props.match.params.topic;
+    this.props.fetchArticlesByTopic(topicName);
+  }
+  render() {
     return (
-      <div>Articles by Topic....</div>
+      <div>
+        {this.props.articles.map(article => (
+          <div key={article._id}>
+            <h3>{article.title}</h3>
+          </div>
+        ))}
+      </div>
     );
   }
 }
+ArticlesByTopic.propTypes = {
+  articles: PT.array.isRequired,
+  loading: PT.bool.isRequired,
+  error: PT.any,
+  fetchArticlesByTopic: PT.func.isRequired
+};
 
+const mapStateToProps = state => ({
+  articles: state.fetchArticlesByTopicReducer.data,
+  loading: state.fetchArticlesByTopicReducer.loading,
+  error: state.fetchArticlesByTopicReducer.error
+});
 
-export default ArtcilesByTopic;
+const mapDispatchToProps = dispatch => ({
+  fetchArticlesByTopic: (topic) => {
+    dispatch(fetchArticlesByTopic(topic));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ArticlesByTopic);
