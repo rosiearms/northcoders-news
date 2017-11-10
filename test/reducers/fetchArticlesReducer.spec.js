@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import fetchArticlesReducer from '../src/reducers/fetchArticlesReducer';
+import fetchArticlesReducer from '../../src/reducers/fetchArticlesReducer';
 import {
   fetchArticlesRequest,
   fetchArticlesSuccess,
@@ -17,7 +17,11 @@ describe('reducer', () => {
     it('uses the initial state if no previous state is passed', () => {
       const action = {type: 'whatever'};
       const newState = fetchArticlesReducer(undefined, action);
-      expect(newState).to.eql(false);
+      expect(newState).to.eql({
+        loading: false,
+        error: null,
+        data: []
+      });
     });
   });
   describe('handles FETCH_ARTICLES actions', () => {

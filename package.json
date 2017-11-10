@@ -2,6 +2,17 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "mocha --require babel-register ./test/*/*.spec.js",
+    "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "bulma": "^0.6.0",
@@ -15,12 +26,6 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "react-scripts": "1.0.17"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "mocha --require babel-register ./spec/*/*.spec.js",
-    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
