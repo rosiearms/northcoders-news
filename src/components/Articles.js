@@ -22,14 +22,13 @@ class Articles extends React.Component {
               {articles.map(article => (
                 <div  key={article._id}>
                   <h3>{article.title}</h3>
-                  <p>{article.belongs_to}</p> <p>{article.created_by}</p> <p>{article.comments}</p> <p>{article.votes}</p>
+        <p><Link to={`/articles/${article._id}/comments`}>Comments...</Link></p>
                 </div>								
               ))}
             </div>
           )}
         </div>
 
-        <p><Link to='/articles/:article_id/comments'>Comments...</Link></p>
         <p><Link to='/users/:username'>Author...</Link></p>
       </div>
     );
