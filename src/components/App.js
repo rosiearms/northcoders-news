@@ -6,6 +6,7 @@ import ArticlesByTopic from './ArticlesByTopic';
 import Articles from './Articles';
 import ArticleComments from './ArticleComments';
 import Author from './Author';
+import SingleArticle from './SingleArticle';
 
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={Homepage} />
             <Route exact path='/articles' component={Articles} />
+            <Route exact path='/articles/:article_id' component={SingleArticle} />
             <Route exact path='/topics' component={Topics} />
             <Route exact path='/topics/:topic/articles' component={ArticlesByTopic} />
             <Route exact path='/articles/:article_id/comments' component={ArticleComments} />

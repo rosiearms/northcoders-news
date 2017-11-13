@@ -22,7 +22,7 @@ class Articles extends React.Component {
               {articles.map(article => (
                 <div  key={article._id}>
                   <h3>{article.title}</h3>
-        <p><Link to={`/articles/${article._id}/comments`}>Comments...</Link></p>
+                  <Link to={`/articles/${article._id}`}>Read more...</Link>
                 </div>								
               ))}
             </div>
