@@ -1,0 +1,33 @@
+.hero {
+    box-shadow: inset 0px 0px 20px 20px black;
+}
+
+.article-card {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
+}
+
+.articles h1 {
+    font-family: 'Vollkorn SC', serif;
+}
+
+.articles h2 {
+    font-family: 'Poiret One', cursive;
+}
+
+.article {
+    background-color: black;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+    padding: 1em;
+}
+
+.article h1 {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 1.5em
+}
+
+.article h3 {
+    font-family: 'Poiret One', cursive;
+}

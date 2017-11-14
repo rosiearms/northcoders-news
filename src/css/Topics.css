@@ -1,0 +1,21 @@
+.topics h1 {
+    font-family: 'Vollkorn SC', serif;
+}
+
+.topics h2 {
+    font-family: 'Poiret One', cursive;
+}
+
+.topics .column {
+    display: inline-block;
+    border: solid white;
+    margin: 2em;
+}
+
+.topics .column h1 {
+    font-size: 2em;
+}
+
+.topics img {
+    background-size: cover;
+}

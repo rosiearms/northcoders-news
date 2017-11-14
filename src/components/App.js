@@ -7,13 +7,18 @@ import Articles from './Articles';
 import ArticleComments from './ArticleComments';
 import Author from './Author';
 import SingleArticle from './SingleArticle';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import '../css/App.css';
+
 
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div className='App'>
+          <Navbar />
           <Switch>
             <Route exact path='/' component={Homepage} />
             <Route exact path='/articles' component={Articles} />
@@ -23,6 +28,7 @@ class App extends React.Component {
             <Route exact path='/articles/:article_id/comments' component={ArticleComments} />
             <Route exact path='/users/:username' component={Author} />
           </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
     );

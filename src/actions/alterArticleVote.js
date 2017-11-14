@@ -11,7 +11,7 @@ export const alterArticleVoteRequest = (id, vote) => ({
 
 export const alterArticleVoteSuccess = (data) => ({
   type: types.ALTER_ARTICLE_VOTE_SUCCESS,
-  payload: data.votes
+  payload: data
 });
 
 export const alterArticleVoteFailure = (error) => ({

@@ -36,12 +36,6 @@ class ArticleComments extends React.Component {
   render() {
     return (
       <div>
-        {this.props.comments.map(comment => (
-          <div key={comment._id}>
-            <h3>{comment.body}</h3>
-            <h4>{comment.created_by}</h4>
-          </div>
-        ))}
         <div>
         <form onSubmit = {this.handleSubmit}>
           <label>Add a comment</label>
@@ -50,6 +44,12 @@ class ArticleComments extends React.Component {
           <input type = 'submit'/>
         </form>
       </div>
+        {this.props.comments.map(comment => (
+          <div key={comment._id}>
+            <h3>{`${comment.body}...`}</h3>
+            <h4>{comment.created_by}</h4>
+          </div>
+        ))}
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PT from 'prop-types';
+import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import fetchArticlesByTopic from '../actions/fetchArticlesByTopic';
 
@@ -13,7 +14,7 @@ class ArticlesByTopic extends React.Component {
       <div>
         {this.props.articles.map(article => (
           <div key={article._id}>
-            <h3>{article.title}</h3>
+            <h3>{article.title}</h3><Link to={`/articles/${article._id}`}>...</Link>
           </div>
         ))}
       </div>

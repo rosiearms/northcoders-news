@@ -3,6 +3,7 @@ import PT from 'prop-types';
 import {Link, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import fetchArticles from '../actions/fetchArticles';
+import '../css/Articles.css'
 
 class Articles extends React.Component {
   componentDidMount () {
@@ -11,26 +12,37 @@ class Articles extends React.Component {
   render() {
     const {articles, loading, error} = this.props;
     return(
-      <div>
-        <div>
-          <h2>Articles...</h2>
+      <div className='articles'>
+      <section className="hero is-dark is-bold">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title">
+            Articles
+          </h1>
+          <h2 className="subtitle">
+          Click 'Read more' to view the full article. Don't forget to vote if you like it, or vote down if you don't!
+          </h2>
+        </div>
+      </div>
+      </section>
           {error && <Redirect to='/404' />}
           {loading || articles.length === 0 ? (
             <p>Loading...</p>
           ) : (
-            <div>
+            <div className='article-card'>
+            <div className='tile is-ancestor is-vertical'>
               {articles.map(article => (
-                <div  key={article._id}>
-                  <h3>{article.title}</h3>
-                  <Link to={`/articles/${article._id}`}>Read more...</Link>
+                <div  key={article._id} className='tile is-6 is-parent'>
+                  <div className='tile article is-child box'>
+                  <h1>{article.title}</h1>
+                  <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>                  
+                  </div>
                 </div>								
               ))}
             </div>
+            </div>
           )}
         </div>
-
-        <p><Link to='/users/:username'>Author...</Link></p>
-      </div>
     );
   }
 }
