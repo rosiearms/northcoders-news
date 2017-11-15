@@ -1,0 +1,39 @@
+.comment-card {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
+}
+
+.comment-card h3 {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.comment {
+    padding: 1.5em;
+}
+
+.comment-card h4 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+}
+
+.comment-box{
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
+}
+
+.comment-box label {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+    font-size: 1.25em;
+}
+
+.input-box {
+    height: 2.6em;
+}

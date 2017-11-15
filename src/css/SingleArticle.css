@@ -1,0 +1,24 @@
+.single-article h1 {
+    font-family: 'Vollkorn SC', serif;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+}
+
+.card {
+    margin: 4em;
+    box-shadow: 10px 5px 20px #8B2121; 
+}
+
+.card .title {
+    font-size: 1.25em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card .fa-thumbs-up {
+    color: green;
+}
+
+.card .fa-thumbs-down {
+    color:  red;
+}

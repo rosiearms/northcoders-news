@@ -7,7 +7,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className='Homepage'>
-      <section className="hero is-dark is-bold">
+      <section className="hero is-bold">
       <div className="hero-body">
         <div className="container">
           <h1 className="title">

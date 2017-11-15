@@ -4,6 +4,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import fetchArticles from '../actions/fetchArticles';
 import alterArticleVote from '../actions/alterArticleVote';
+import ArticleComments from './ArticleComments';
+import '../css/SingleArticle.css';
 
 class SingleArticle extends React.Component {
 	constructor(props) {
@@ -43,15 +45,68 @@ class SingleArticle extends React.Component {
 							<div>
 								{articles.map(article => (
 									<div key={article._id}>
-										{article._id === id ? (<div>
-											<h1>{article.title}</h1>
-											<p>{article.body}</p>
-											<p>{article.votes + this.state.votes}</p><button onClick={this.incrementVote}>up</button><button onClick={this.decrementVote}>down</button>
-											<p><Link to={`/users/${article.created_by}`}>{article.created_by}</Link></p>
-											<p><Link to={`/articles/${article._id}/comments`}>view comments...</Link></p>
-										</div>) : ''}
+										{article._id === id ? (
+											<div className='single-article'>
+												<section className="hero is-bold">
+													<div className="hero-body">
+														<div className="container">
+															<h1 className="title">
+																{article.title}</h1>
+														</div>
+													</div>
+												</section>
+												<div className="card">
+													<div className="card-content">
+														<p className="title">
+															{`“${article.body}”`}
+														</p>
+														<p className="subtitle">
+															<Link to={`/users/${article.created_by}`}>{article.created_by}</Link>
+														</p>
+													</div>
+													<footer className="card-footer">
+														<p className="card-footer-item">
+															<span>
+																RATING: {article.votes + this.state.votes}
+															</span>
+														</p>
+														<p className="card-footer-item">
+															<span>
+																<button onClick={this.incrementVote}><span className="icon is-small">
+                            <i className="fa fa-2x fa-thumbs-up"></i>
+                        </span></button>
+															</span>
+														</p>
+														<p className="card-footer-item">
+															<span>
+																<button onClick={this.decrementVote}><span className="icon is-small">
+                            <i className="fa fa-2x fa-thumbs-down"></i>
+                        </span></button>
+															</span>
+														</p>
+														<p className="card-footer-item">
+															<span>
+															</span>
+														</p>
+														<p className="card-footer-item">
+															<span>
+															</span>
+														</p>
+														<p className="card-footer-item">
+															<span>
+															</span>
+														</p>
+														<p className="card-footer-item">
+															<span>
+															</span>
+														</p>
+													</footer>
+												</div>
+											</div>) : ''}
 									</div>
 								))}
+								<ArticleComments 
+								id={this.props.match.params.article_id}/>
 							</div>
 						)}
 				</div>

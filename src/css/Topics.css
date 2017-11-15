@@ -1,5 +1,8 @@
 .topics h1 {
     font-family: 'Vollkorn SC', serif;
+    color: white;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
 }
 
 .topics h2 {

@@ -1,5 +1,9 @@
 .hero {
-    box-shadow: inset 0px 0px 20px 20px black;
+    border: solid rgba(195, 32, 32, 0.70);
+    box-shadow: 0px 0px 20px 2px rgba(195, 32, 32, 0.70); 
+    background-color: black;
+    margin-left: 2em;
+    margin-right: 2em
 }
 
 .article-card {
@@ -10,10 +14,14 @@
 
 .articles h1 {
     font-family: 'Vollkorn SC', serif;
+    color: white;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
 }
 
 .articles h2 {
     font-family: 'Poiret One', cursive;
+    color: white
 }
 
 .article {

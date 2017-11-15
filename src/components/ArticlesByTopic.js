@@ -1,7 +1,8 @@
 import React from 'react';
 import PT from 'prop-types';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
+import '../css/Articles.css';
 import fetchArticlesByTopic from '../actions/fetchArticlesByTopic';
 
 class ArticlesByTopic extends React.Component {
@@ -10,13 +11,38 @@ class ArticlesByTopic extends React.Component {
     this.props.fetchArticlesByTopic(topicName);
   }
   render() {
+    const {articles, loading, error} = this.props;
     return (
-      <div>
-        {this.props.articles.map(article => (
-          <div key={article._id}>
-            <h3>{article.title}</h3><Link to={`/articles/${article._id}`}>...</Link>
-          </div>
-        ))}
+      <div className='articles'>
+         <section className="hero is-bold">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title">
+            Articles
+          </h1>
+          <h2 className="subtitle">
+          Click 'Read more' to view the full article. Don't forget to vote if you like it, or vote down if you don't!
+          </h2>
+        </div>
+      </div>
+      </section>
+      {error && <Redirect to='/404' />}
+      {loading || articles.length === 0 ? (
+        <p>Loading...</p>
+      ) : (
+        <div className='article-card'>
+        <div className='tile is-ancestor is-vertical'>
+          {articles.map(article => (
+            <div  key={article._id} className='tile is-6 is-parent'>
+              <div className='tile article is-child box'>
+              <h1>{article.title}</h1>
+              <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>                  
+              </div>
+            </div>								
+          ))}
+        </div>
+        </div>
+      )}
       </div>
     );
   }

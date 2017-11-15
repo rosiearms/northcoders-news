@@ -3,6 +3,7 @@ import PT from 'prop-types';
 import { connect } from 'react-redux';
 import fetchCommentsByArticle from '../actions/fetchCommentsByArticle';
 import postNewComment from '../actions/postNewComment';
+import '../css/ArticleComments.css';
 
 class ArticleComments extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class ArticleComments extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   componentDidMount() {
-    const id = this.props.match.params.article_id;
+    const id = this.props.id;
     this.props.fetchCommentsByArticle(id);
   }
   handleChange(e) {
@@ -26,9 +27,9 @@ class ArticleComments extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const {text} = this.state;
-    const id = this.props.match.params.article_id;
+    const id = this.props.id;
     this.props.postNewComment(text, id);
-    setTimeout(() => {this.props.fetchCommentsByArticle(id)}, 500)
+    setTimeout(() => {this.props.fetchCommentsByArticle(id)}, 2000)
     this.setState({
       text: ''
     })
@@ -36,20 +37,27 @@ class ArticleComments extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div className='comment-box'>
         <form onSubmit = {this.handleSubmit}>
-          <label>Add a comment</label>
+          <label>Don't just vote, have your say too!
+          </label>
           <br/>
-          <input type ='text' onChange= {this.handleChange} value = {this.state.text}/>
-          <input type = 'submit'/>
+          <input className='input-box' type ='text' onChange= {this.handleChange} value = {this.state.text}/>
+          <input class="button" type="submit" value="Post"/>
         </form>
       </div>
+      <div className='comment-card'>
+      <div className='tile is-ancestor is-vertical'>
         {this.props.comments.map(comment => (
-          <div key={comment._id}>
-            <h3>{`${comment.body}...`}</h3>
+          <div className='tile is-7 is parent' key={comment._id}>
             <h4>{comment.created_by}</h4>
+            <div className='tile comment is-child-box'>
+            <h3>{`"${comment.body}"`}</h3>
+            </div>
           </div>
         ))}
+        </div>
+        </div>
       </div>
     );
   }
