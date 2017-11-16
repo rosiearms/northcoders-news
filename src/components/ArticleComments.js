@@ -1,6 +1,7 @@
 import React from 'react';
 import PT from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import fetchCommentsByArticle from '../actions/fetchCommentsByArticle';
 import postNewComment from '../actions/postNewComment';
 import '../css/ArticleComments.css';
@@ -50,7 +51,7 @@ class ArticleComments extends React.Component {
       <div className='tile is-ancestor is-vertical'>
         {this.props.comments.map(comment => (
           <div className='tile is-7 is parent' key={comment._id}>
-            <h4>{comment.created_by}</h4>
+            <h4><Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link></h4>
             <div className='tile comment is-child-box'>
             <h3>{`"${comment.body}"`}</h3>
             </div>

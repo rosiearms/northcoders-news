@@ -1,0 +1,20 @@
+.author-articles {
+    margin-left: 2em
+}
+
+.author .card-content {
+    background-color: black;
+}
+
+.author .media-content p {
+    font-family: 'Vollkorn SC', serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+}
+
+.author .media-content .description {
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 1em
+}
+

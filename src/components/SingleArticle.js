@@ -73,15 +73,15 @@ class SingleArticle extends React.Component {
 														<p className="card-footer-item">
 															<span>
 																<button onClick={this.incrementVote}><span className="icon is-small">
-                            <i className="fa fa-2x fa-thumbs-up"></i>
-                        </span></button>
+																	<i className="fa fa-2x fa-thumbs-up"></i>
+																</span></button>
 															</span>
 														</p>
 														<p className="card-footer-item">
 															<span>
 																<button onClick={this.decrementVote}><span className="icon is-small">
-                            <i className="fa fa-2x fa-thumbs-down"></i>
-                        </span></button>
+																	<i className="fa fa-2x fa-thumbs-down"></i>
+																</span></button>
 															</span>
 														</p>
 														<p className="card-footer-item">
@@ -105,8 +105,8 @@ class SingleArticle extends React.Component {
 											</div>) : ''}
 									</div>
 								))}
-								<ArticleComments 
-								id={this.props.match.params.article_id}/>
+								<ArticleComments
+									id={this.props.match.params.article_id} />
 							</div>
 						)}
 				</div>
