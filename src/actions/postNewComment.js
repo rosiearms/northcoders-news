@@ -1,7 +1,8 @@
 import axios from 'axios';
 import * as types from './types';
 
-const API_URL = 'https://northcoders-news-api.herokuapp.com/api';
+// const API_URL = 'https://northcoders-news-api.herokuapp.com/api';
+const API_URL = 'http://localhost:3001/api';
 
 export const postNewCommentRequest = (comment, id) => ({
   type: types.POST_NEW_COMMENT_REQUEST,

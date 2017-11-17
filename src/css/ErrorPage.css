@@ -1,0 +1,9 @@
+.ErrorPage{
+    text-align: center;
+}
+
+.ErrorPage h1 {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}

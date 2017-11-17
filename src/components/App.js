@@ -9,6 +9,7 @@ import Author from './Author';
 import SingleArticle from './SingleArticle';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ErrorPage from './ErrorPage';
 import '../css/App.css';
 
 
@@ -27,6 +28,7 @@ class App extends React.Component {
             <Route exact path='/topics/:topic/articles' component={ArticlesByTopic} />
             <Route exact path='/articles/:article_id/comments' component={ArticleComments} />
             <Route exact path='/users/:username' component={Author} />
+            <Route component={ErrorPage} />
           </Switch>
           <Footer />
         </div>
