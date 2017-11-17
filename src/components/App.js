@@ -28,7 +28,7 @@ class App extends React.Component {
             <Route exact path='/topics/:topic/articles' component={ArticlesByTopic} />
             <Route exact path='/articles/:article_id/comments' component={ArticleComments} />
             <Route exact path='/users/:username' component={Author} />
-            <Route component={ErrorPage} />
+            <Route exact path='/404' component={ErrorPage} />
           </Switch>
           <Footer />
         </div>

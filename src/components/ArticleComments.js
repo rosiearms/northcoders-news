@@ -25,16 +25,16 @@ class ArticleComments extends React.Component {
     });
   }
 
-  handleSubmit(e) {
+  handleSubmit(e){
     e.preventDefault();
-    const {text} = this.state;
     const id = this.props.id;
-    this.props.postNewComment(text, id);
+    this.props.postNewComment(id, this.state.text);
     setTimeout(() => {this.props.fetchCommentsByArticle(id)}, 2000)
     this.setState({
       text: ''
     })
   }
+  
   render() {
     return (
       <div>

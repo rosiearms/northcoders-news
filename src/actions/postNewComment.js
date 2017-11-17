@@ -4,10 +4,10 @@ import * as types from './types';
 // const API_URL = 'https://northcoders-news-api.herokuapp.com/api';
 const API_URL = 'http://localhost:3001/api';
 
-export const postNewCommentRequest = (comment, id) => ({
+export const postNewCommentRequest = (article_id, comment) => ({
   type: types.POST_NEW_COMMENT_REQUEST,
-  payload: { comment,
-            id}
+  payload: {article_id,
+            comment}
 });
   
 export const postNewCommentSuccess = (data) => ({
@@ -20,12 +20,12 @@ export const postNewCommentFailure = (error) => ({
   payload: error
 });
 
-export default (comment, id) => {
+export default (article_id, comment) => {
   return (dispatch) => {
-    dispatch(postNewCommentRequest(comment, id));
-    return axios.post(`${API_URL}/articles/${id}/comments`, {comment:comment})
+    dispatch(postNewCommentRequest(article_id, comment));
+    return axios.post(`${API_URL}/articles/${article_id}/comments`, {comment:comment})
       .then(res => {
-        return dispatch(postNewCommentSuccess(res.data.comments));
+        return dispatch(postNewCommentSuccess([res.data.comment]));
       })
       .catch(error => {
         return dispatch(postNewCommentFailure(error.message));

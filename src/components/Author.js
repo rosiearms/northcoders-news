@@ -14,6 +14,7 @@ class User extends React.Component {
   }
   render() {
     const { articles, user, loading, error } = this.props;
+    console.log('*************', user)
     return (
       <div>
         {error && <Redirect to='/404' />}
@@ -26,13 +27,13 @@ class User extends React.Component {
                   <div className='media'>
                     <div className='media-left'>
                       <figure className="image is-20x20">
-                        <img src={user.users[0].avatar_url} alt="avatar" />
+                        <img src={user.avatar_url} alt="avatar" />
                       </figure>
                     </div>
                     <div className="media-content">
-                      <p className="title is-1">{user.users[0].name}</p>
-                      <p className="subtitle is-1">{user.users[0].username}</p>
-                      <p className='description'>{`Take a look at all of ${user.users[0].username}'s articles below`}</p>
+                      <p className="title is-1">{user.name}</p>
+                      <p className="subtitle is-1">{user.username}</p>
+                      <p className='description'>{`Take a look at all of ${user.username}'s articles below`}</p>
                     </div>
                   </div>
                 </div>

@@ -7,7 +7,8 @@ import alterArticleVote, {
   alterArticleVoteRequest, alterArticleVoteSuccess, alterArticleVoteFailure
 } from '../../src/actions/alterArticleVote';
 
-const API_URL = 'https://northcoders-news-api.herokuapp.com/api';
+// const API_URL = 'https://northcoders-news-api.herokuapp.com/api';
+const API_URL = 'http://localhost:3001/api';
 
 const mockStore = configureMockStore([thunk]);
 
