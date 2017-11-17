@@ -50,14 +50,6 @@ class SingleArticle extends React.Component {
 									<div key={article._id}>
 										{article._id === id ? (
 											<div className='single-article'>
-												<section className="hero is-bold">
-													<div className="hero-body">
-														<div className="container">
-															<h1 className="title">
-																{article.title}</h1>
-														</div>
-													</div>
-												</section>
 												<div className="card">
 													<div className="card-content">
 														<p className="title">

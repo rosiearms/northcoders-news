@@ -2,26 +2,28 @@
     border: solid rgba(195, 32, 32, 0.70);
     box-shadow: 0px 0px 20px 2px rgba(195, 32, 32, 0.70); 
     background-color: black;
-    margin-left: 2em;
-    margin-right: 2em
+    margin-left: 4em;
+    margin-right: 4em
 }
 
 .article-card {
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 2em;
+    margin-left: 4em;
+    margin-right: 1em;
+    margin-top: 1em;
 }
 
 .articles h1 {
     font-family: 'Vollkorn SC', serif;
     color: white;
-    font-size: 3em;
+    margin-left:0.5em;
+    font-size: 2em;
     text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
 }
 
 .articles h2 {
     font-family: 'Poiret One', cursive;
-    color: white
+    color: white;
+    margin-left:1em;
 }
 
 .article {
@@ -33,9 +35,10 @@
 
 .article h1 {
     font-family: 'Vollkorn SC', serif;
-    font-size: 1.5em
+    font-size: 1em
 }
 
 .article h3 {
     font-family: 'Poiret One', cursive;
+    margin-left: 1em;
 }

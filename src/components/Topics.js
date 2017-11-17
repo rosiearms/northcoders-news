@@ -12,18 +12,6 @@ class Topics extends React.Component {
   render() {
     return (
       <div className='topics'>
-      <section className="hero is-bold">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">
-            TOPICS
-          </h1>
-          <h2 className="subtitle">
-          Choose the topic you want to read about....
-          </h2>
-        </div>
-      </div>
-    </section>
         <div className="columns">
           {this.props.topics.map(topic => (
             <div className="column">

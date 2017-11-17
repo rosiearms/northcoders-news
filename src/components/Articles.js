@@ -13,18 +13,6 @@ class Articles extends React.Component {
     const {articles, loading, error} = this.props;
     return(
       <div className='articles'>
-      <section className="hero is-bold">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">
-            Articles
-          </h1>
-          <h2 className="subtitle">
-          Click 'Read more' to view the full article. Don't forget to vote if you like it, or vote down if you don't!
-          </h2>
-        </div>
-      </div>
-      </section>
           {error && <Redirect to='/404' />}
           {loading || articles.length === 0 ? (
             <p>Loading...</p>
