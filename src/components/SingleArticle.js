@@ -11,7 +11,8 @@ class SingleArticle extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			votes: 0
+			votes: 0,
+			voted: false
 		}
 		this.incrementVote = this.incrementVote.bind(this);
 		this.decrementVote = this.decrementVote.bind(this);
@@ -21,7 +22,8 @@ class SingleArticle extends React.Component {
 		const id = this.props.match.params.article_id;
 		this.props.alterArticleVote(id, 'up');
 		this.setState({
-			votes: this.state.votes + 1
+			votes: this.state.votes + 1,
+			voted: true
 		});
 	}
 
@@ -29,7 +31,8 @@ class SingleArticle extends React.Component {
 		const id = this.props.match.params.article_id;
 		this.props.alterArticleVote(id, 'down');
 		this.setState({
-			votes: this.state.votes - 1
+			votes: this.state.votes - 1,
+			voted: true
 		});
 	}
 	render() {
@@ -70,6 +73,8 @@ class SingleArticle extends React.Component {
 																RATING: {article.votes + this.state.votes}
 															</span>
 														</p>
+																{(this.state.voted === false) ?
+																<div>
 														<p className="card-footer-item">
 															<span>
 																<button onClick={this.incrementVote}><span className="icon is-small">
@@ -77,6 +82,19 @@ class SingleArticle extends React.Component {
 																</span></button>
 															</span>
 														</p>
+														</div> : 
+														<div>
+														<p className="card-footer-item">
+															<span>
+																<button disabled='true' onClick={this.incrementVote}><span className="icon is-small">
+																	<i className="fa fa-2x fa-thumbs-up"></i>
+																</span></button>
+															</span>
+														</p>
+														</div>
+																}
+																{(this.state.voted === false) ? 
+																<div>
 														<p className="card-footer-item">
 															<span>
 																<button onClick={this.decrementVote}><span className="icon is-small">
@@ -84,6 +102,16 @@ class SingleArticle extends React.Component {
 																</span></button>
 															</span>
 														</p>
+														</div> :
+														<div> 
+														<p className="card-footer-item">
+															<span>
+																<button disabled='true' onClick={this.decrementVote}><span className="icon is-small">
+																	<i className="fa fa-2x fa-thumbs-down"></i>
+																</span></button>
+															</span>
+														</p>
+														</div> }
 														<p className="card-footer-item">
 															<span>
 															</span>
