@@ -86,9 +86,7 @@ class SingleArticle extends React.Component {
 														<div>
 														<p className="card-footer-item">
 															<span>
-																<button disabled='true' onClick={this.incrementVote}><span className="icon is-small">
-																	<i className="fa fa-2x fa-thumbs-up"></i>
-																</span></button>
+																Thanks for voting!
 															</span>
 														</p>
 														</div>
@@ -106,9 +104,6 @@ class SingleArticle extends React.Component {
 														<div> 
 														<p className="card-footer-item">
 															<span>
-																<button disabled='true' onClick={this.decrementVote}><span className="icon is-small">
-																	<i className="fa fa-2x fa-thumbs-down"></i>
-																</span></button>
 															</span>
 														</p>
 														</div> }
