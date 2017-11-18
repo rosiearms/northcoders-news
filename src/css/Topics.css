@@ -1,6 +1,9 @@
 .topics h1 {
     font-family: 'Vollkorn SC', serif;
-    color: white;
+    color: black;
+    -webkit-text-fill-color: white; 
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
     font-size: 4em;
     text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
 }
@@ -13,6 +16,7 @@
     display: inline-block;
     border: solid white;
     margin: 2em;
+    margin-top:7em;
 }
 
 .topics .column h1 {

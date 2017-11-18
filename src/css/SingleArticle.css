@@ -1,6 +1,3 @@
-.hero{
-    font-size: 1em;
-}
 
 .single-article h1 {
     font-family: 'Vollkorn SC', serif;
@@ -10,8 +7,9 @@
 }
 
 .card {
-    margin: 4em;
-    box-shadow: 10px 5px 20px #8B2121; 
+    margin: 6em;
+    box-shadow: 0 7.5px 5px #777;
+    border: solid 1px white;
 }
 
 .card .title {

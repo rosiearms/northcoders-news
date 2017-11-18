@@ -22,10 +22,11 @@ class SingleComment extends React.Component {
 				<h4><Link to={`/users/${this.props.created_by}`}>{this.props.created_by}</Link></h4>
             <div className='tile comment is-child-box'>
             <h3>{`"${this.props.body}"`}</h3>
+			<br/>
             {(this.props.created_by === 'northcoder') ? <div>
-              <button onClick={this.removeComment}>delete</button></div> :
+              <button className='delete is-small' onClick={this.removeComment}>X</button></div> :
               <div>
-                <button disabled='true'>delete</button></div>}
+            </div>}
             </div>
 			</div>
 		);

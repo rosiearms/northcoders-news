@@ -1,12 +1,13 @@
 .comment-card {
-    margin-left: 2em;
+    margin-left: 5em;
     margin-right: 2em;
     margin-top: 2em;
+    margin-bottom: 5em;
 }
 
 .comment-card h3 {
     font-family: 'Times New Roman', Times, serif;
-    color: white;
+    color: black;
 }
 
 .comment {
@@ -21,7 +22,7 @@
 }
 
 .comment-box{
-    margin-left: 2em;
+    margin-left: 5em;
     margin-right: 2em;
     margin-top: 2em;
 }
@@ -29,7 +30,7 @@
 .comment-box label {
     font-family: 'Poiret One', cursive;
     font-weight: bold;
-    color: white;
+    color: black;
     text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
     font-size: 1.25em;
 }

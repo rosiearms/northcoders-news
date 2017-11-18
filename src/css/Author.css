@@ -1,5 +1,6 @@
 .author-articles {
-    margin-left: 2em
+    margin-left: 5em;
+    margin-bottom: 5em;
 }
 
 .author .card-content {
@@ -16,5 +17,16 @@
     color: white;
     font-family: 'Poiret One', cursive;
     font-size: 1em
+}
+
+.author-articles .article {
+    background-color: white;
+    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+    padding: 1em;
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-bottom: 5em;
+    box-shadow: none;
+    border: none
 }
 

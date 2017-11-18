@@ -1,6 +1,10 @@
 .navbar {
-    background-color: black;
-    margin-bottom: 2em
+    background-color: black;    
+    margin-bottom: 2em;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top:0;
 }
 
 .icon {

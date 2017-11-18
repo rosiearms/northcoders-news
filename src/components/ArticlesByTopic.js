@@ -2,7 +2,7 @@ import React from 'react';
 import PT from 'prop-types';
 import {Link, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
-import '../css/Articles.css';
+import '../css/ArticlesByTopic.css';
 import fetchArticlesByTopic from '../actions/fetchArticlesByTopic';
 
 class ArticlesByTopic extends React.Component {
@@ -19,8 +19,8 @@ class ArticlesByTopic extends React.Component {
         <p>Loading...</p>
       ) : (
         <div className='article-card'>
-          <h1>{this.props.match.params.topic}</h1>
         <div className='tile is-ancestor is-vertical'>
+          <h1>{this.props.match.params.topic}</h1>
           {articles.map(article => (
             <div  key={article._id} className='tile is-6 is-parent'>
               <div className='tile article is-child box'>

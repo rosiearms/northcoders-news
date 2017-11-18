@@ -1,36 +1,36 @@
 import React from 'react';
 import PT from 'prop-types';
-import {Link, Redirect} from 'react-router-dom';
-import {connect} from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import fetchArticles from '../actions/fetchArticles';
-import '../css/Articles.css'
+import '../css/Articles.css';
 
 class Articles extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     this.props.fetchArticles();
   }
   render() {
-    const {articles, loading, error} = this.props;
-    return(
+    const { articles, loading, error } = this.props;
+    return (
       <div className='articles'>
-          {error && <Redirect to='/404' />}
-          {loading || articles.length === 0 ? (
-            <p>Loading...</p>
-          ) : (
+        {error && <Redirect to='/404' />}
+        {loading || articles.length === 0 ? (
+          <p>Loading...</p>
+        ) : (
             <div className='article-card'>
-            <div className='tile is-ancestor is-vertical'>
-              {articles.map(article => (
-                <div  key={article._id} className='tile is-6 is-parent'>
-                  <div className='tile article is-child box'>
-                  <h1>{article.title}</h1>
-                  <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>                  
+              <div className='tile is-ancestor is-vertical'>
+                {articles.map(article => (
+                  <div key={article._id} className='tile is-6 is-parent'>
+                    <div className='tile article is-child box'>
+                      <h1>{article.title}</h1>
+                      <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>
+                    </div>
                   </div>
-                </div>								
-              ))}
-            </div>
+                ))}
+              </div>
             </div>
           )}
-        </div>
+      </div>
     );
   }
 }
