@@ -1,9 +1,9 @@
 import React from 'react';
 import PT from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import fetchCommentsByArticle from '../actions/fetchCommentsByArticle';
 import postNewComment from '../actions/postNewComment';
+import Comment from './Comment';
 import '../css/ArticleComments.css';
 
 class ArticleComments extends React.Component {
@@ -19,6 +19,7 @@ class ArticleComments extends React.Component {
     const id = this.props.id;
     this.props.fetchCommentsByArticle(id);
   }
+
   handleChange(e) {
     this.setState({
       text: e.target.value
@@ -34,7 +35,7 @@ class ArticleComments extends React.Component {
       text: ''
     })
   }
-  
+
   render() {
     return (
       <div>
@@ -49,12 +50,14 @@ class ArticleComments extends React.Component {
       </div>
       <div className='comment-card'>
       <div className='tile is-ancestor is-vertical'>
-        {this.props.comments.map(comment => (
-          <div className='tile is-7 is parent' key={comment._id}>
-            <h4><Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link></h4>
-            <div className='tile comment is-child-box'>
-            <h3>{`"${comment.body}"`}</h3>
-            </div>
+        {this.props.comments.map((comment, i) => (
+          <div className='tile is-7 is parent' key={i}>
+            <Comment
+            comment_id={comment._id}
+            created_by={comment.created_by}
+            body={comment.body}
+            article_id={this.props.id} />
+            
           </div>
         ))}
         </div>
@@ -63,9 +66,9 @@ class ArticleComments extends React.Component {
     );
   }
 }
+
 ArticleComments.propTypes = {
   comments: PT.array.isRequired,
-  loading: PT.bool.isRequired,
   error: PT.any,
   fetchCommentsByArticle: PT.func.isRequired
 
