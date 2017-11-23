@@ -6,8 +6,8 @@ import '../css/Homepage.css';
 class HomePage extends React.Component {
   render() {
     return (
-      <div className='Homepage'>
-        <section className="hero is-bold">
+      <div className='Homepage is-marginless'>
+        <section className="hero is-medium is-marginless">
           <div className="hero-body">
             <div className="container">
               <h1 className="title">
@@ -18,15 +18,21 @@ class HomePage extends React.Component {
               </h2>
             </div>
           </div>
-        </section>
-        <div className='columns'>
-          <div className='column is-half'>
-            <h3>Browse through all our <Link to='/articles'>articles...</Link></h3>
+          <div className='hero-footer'>
+        <div className='container'>
+        <Link to='/articles'>
+          <div className='button is-inverted first'>
+            <h3>All Articles</h3>
           </div>
-          <div className='column is-half'>
-            <h3>Or take a look at our <Link to='/topics'>topics...</Link></h3>
+          </Link>
+          <Link to='/topics'>
+          <div className='button second'>
+            <h3>Topics</h3>
           </div>
+          </Link>
         </div>
+        </div>
+        </section>
       </div>
     );
   }

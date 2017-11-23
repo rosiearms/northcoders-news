@@ -1,26 +1,28 @@
 .hero {
-    background-color: rgba(255, 255, 255, 0.51);
-    margin-left: 2em;
-    margin-right: 2em;
+    background: url('http://cdn2.hubspot.net/hubfs/145335/blogging-for-business-heres-everything-you-need-to-know.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     margin-top:2em;
     font-size: 0.5em;
     
 }
 
-.Homepage{
-    text-align: center;
-    background-color: white;
-    height:100%;
+.hero-body .container {
+    background-color: rgba(232, 222, 222, 0.39);
+    padding: 2em;
+    border-radius: 1em;
+}
 
+.Homepage{
+    background-color: black;
+    height:100%;
 }   
 
 
 .Homepage h1 {
     font-family: 'Vollkorn SC', serif;
     color: black;
-    -webkit-text-fill-color: white; 
-    -webkit-text-stroke-width: 0.2px;
-    -webkit-text-stroke-color: black;
     font-size: 4em;
     text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
 }
@@ -28,36 +30,10 @@
 .Homepage h2 {
     font-family: 'Poiret One', cursive;
     color: black;
+    font-weight: bold;
 }
 
-.column h3 {
-    color: black;
-    font-size: 1.5em;
-    font-family: 'Poiret One', cursive;
-    padding: 2em;
-}
-
-.columns {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0 1em;
-    list-style: none;
-    margin-bottom:10em;
-    margin-bottom: 4em;
-}
-
-.column {
-    padding: 5px;
-    margin-left: 6em;
-    margin-right: 6em;
-    margin-bottom: 3em;
-    box-shadow: 0 7.5px 5px #777;
-    border: solid 1px white;    
-}
-
-.column:hover {
-    box-shadow: 0 12px 10px #777;
-    background: url('https://thumbs.dreamstime.com/b/red-vintage-typewriter-kids-portable-paper-industrial-42651044.jpg') left no-repeat;
-    background-size: 7em;
+.button {
+    background-color: black;
+    color: white;
 }
