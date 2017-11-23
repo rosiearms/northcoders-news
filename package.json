@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "pretest": "npm run lint",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "mocha --require babel-register ./test/*/*.spec.js",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint ./",
+    "lint:fix": "npm run lint -- --fix",
+    "precommit": "npm test"
   },
   "babel": {
     "presets": [

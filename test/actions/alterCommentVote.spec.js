@@ -21,7 +21,7 @@ describe('async action creators', () => {
       nock(API_URL)
         .put('/comments/583412975905f02e4c8e6e24?vote=up')
         .reply(200, {_id: '583412975905f02e4c8e6e24', vote: 'up'}
-);
+        );
       
       const expectedActions = [
         alterCommentVoteRequest('583412975905f02e4c8e6e24', 'up'),

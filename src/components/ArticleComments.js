@@ -30,37 +30,37 @@ class ArticleComments extends React.Component {
     e.preventDefault();
     const id = this.props.id;
     this.props.postNewComment(id, this.state.text);
-    setTimeout(() => {this.props.fetchCommentsByArticle(id)}, 2000)
+    setTimeout(() => {this.props.fetchCommentsByArticle(id);}, 2000);
     this.setState({
       text: ''
-    })
+    });
   }
 
   render() {
     return (
       <div>
         <div className='comment-box'>
-        <form onSubmit = {this.handleSubmit}>
-          <label>Don't just vote, have your say too!
-          </label>
-          <br/>
-          <input className='input-box' type ='text' onChange= {this.handleChange} value = {this.state.text}/>
-          <input class="button" type="submit" value="Post"/>
-        </form>
-      </div>
-      <div className='comment-card'>
-      <div className='tile is-ancestor is-vertical'>
-        {this.props.comments.map((comment, i) => (
-          <div className='tile is-7 is parent' key={i}>
-            <Comment
-            comment_id={comment._id}
-            created_by={comment.created_by}
-            body={comment.body}
-            article_id={this.props.id} />
-            
-          </div>
-        ))}
+          <form onSubmit = {this.handleSubmit}>
+            <label>Post something!
+            </label>
+            <br/>
+            <input className='input-box' type ='text' onChange= {this.handleChange} value = {this.state.text}/>
+            <input className="button" type="submit" value="Post"/>
+          </form>
         </div>
+        <div className='comment-card'>
+          <div className='tile is-ancestor is-vertical'>
+            {this.props.comments.map((comment, i) => (
+              <div className='tile is-7 is parent' key={i}>
+                <Comment
+                  comment_id={comment._id}
+                  created_by={comment.created_by}
+                  body={comment.body}
+                  article_id={this.props.id} />
+            
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -70,17 +70,19 @@ class ArticleComments extends React.Component {
 ArticleComments.propTypes = {
   comments: PT.array.isRequired,
   error: PT.any,
-  fetchCommentsByArticle: PT.func.isRequired
+  fetchCommentsByArticle: PT.func.isRequired,
+  id: PT.number.isRequired,
+  postNewComment: PT.func.isRequired
 
 };
 
 
 const mapStateToProps = (state) => {
   return {
-  comments: state.fetchCommentsByArticleReducer.data,
-  loading: state.fetchCommentsByArticleReducer.loading,
-  error: state.fetchCommentsByArticleReducer.error
-  }
+    comments: state.fetchCommentsByArticleReducer.data,
+    loading: state.fetchCommentsByArticleReducer.loading,
+    error: state.fetchCommentsByArticleReducer.error
+  };
 };
 
 const mapDispatchToProps = dispatch => ({

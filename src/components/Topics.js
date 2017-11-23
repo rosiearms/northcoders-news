@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PT from 'prop-types'
+import PT from 'prop-types';
 import { connect } from 'react-redux';
 import fetchTopics from '../actions/fetchTopics';
 import '../css/Topics.css';
@@ -13,8 +13,8 @@ class Topics extends React.Component {
     return (
       <div className='topics'>
         <div className="columns">
-          {this.props.topics.map(topic => (
-            <div className="column">
+          {this.props.topics.map((topic, i) => (
+            <div key={i} className="column">
               <h1>{topic.title}</h1>
               {(topic.title === 'Football') ?  <Link key={topic._id} to={`/topics/${topic.slug}/articles`}><img src='https://i.gjcdn.net/data/fireside/posts/0/162/162/media/bouncebounce-s7ryhwwt.gif' alt='playing-football'/></Link> : (topic.title === 'Cooking') ? <Link key={topic._id} to={`/topics/${topic.slug}/articles`}><img src='https://img.buzzfeed.com/buzzfeed-static/static/2016-06/10/14/asset/buzzfeed-prod-fastlane02/anigif_sub-buzz-24586-1465583133-4.gif' alt='making-a-burger'/></Link> : (topic.title === 'Coding') ?  <Link key={topic._id} to={`/topics/${topic.slug}/articles`}><img src='https://media.giphy.com/media/gU25raLP4pUu4/giphy.gif' alt='code-screen'/> </Link>: ''
               }
@@ -34,7 +34,6 @@ Topics.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     topics: state.fetchTopicsReducer.data,
     loading: state.fetchTopicsReducer.loading,

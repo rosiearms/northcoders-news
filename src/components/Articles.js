@@ -17,19 +17,19 @@ class Articles extends React.Component {
         {loading || articles.length === 0 ? (
           <p>Loading...</p>
         ) : (
-            <div className='article-card'>
-              <div className='tile is-ancestor is-vertical'>
-                {articles.map(article => (
-                  <div key={article._id} className='tile is-6 is-parent'>
-                    <div className='tile article is-child box'>
-                      <h1>{article.title}</h1>
-                      <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>
-                    </div>
+          <div className='article-card'>
+            <div className='tile is-ancestor is-vertical'>
+              {articles.map(article => (
+                <div key={article._id} className='tile is-6 is-parent'>
+                  <div className='tile article is-child box'>
+                    <h1>{article.title}</h1>
+                    <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          )}
+          </div>
+        )}
       </div>
     );
   }

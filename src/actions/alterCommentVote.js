@@ -7,7 +7,7 @@ const API_URL = 'http://localhost:3001/api';
 export const alterCommentVoteRequest = (id, vote) => ({
   type: types.ALTER_COMMENT_VOTE_REQUEST,
   payload: {id,
-  vote}
+    vote}
 });
 
 export const alterCommentVoteSuccess = (data) => ({

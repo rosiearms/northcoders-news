@@ -14,24 +14,24 @@ class ArticlesByTopic extends React.Component {
     const {articles, loading, error} = this.props;
     return (
       <div className='articles'>
-      {error && <Redirect to='/404' />}
-      {loading || articles.length === 0 ? (
-        <p>Loading...</p>
-      ) : (
-        <div className='article-card'>
-        <div className='tile is-ancestor is-vertical'>
-          <h1>{this.props.match.params.topic}</h1>
-          {articles.map(article => (
-            <div  key={article._id} className='tile is-6 is-parent'>
-              <div className='tile article is-child box'>
-              <h1>{article.title}</h1>
-              <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>                  
-              </div>
-            </div>								
-          ))}
-        </div>
-        </div>
-      )}
+        {error && <Redirect to='/404' />}
+        {loading || articles.length === 0 ? (
+          <p>Loading...</p>
+        ) : (
+          <div className='article-card'>
+            <div className='tile is-ancestor is-vertical'>
+              <h1>{this.props.match.params.topic}</h1>
+              {articles.map(article => (
+                <div  key={article._id} className='tile is-6 is-parent'>
+                  <div className='tile article is-child box'>
+                    <h1>{article.title}</h1>
+                    <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>                  
+                  </div>
+                </div>								
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -40,7 +40,8 @@ ArticlesByTopic.propTypes = {
   articles: PT.array.isRequired,
   loading: PT.bool.isRequired,
   error: PT.any,
-  fetchArticlesByTopic: PT.func.isRequired
+  fetchArticlesByTopic: PT.func.isRequired,
+  match: PT.string.isRequired
 };
 
 const mapStateToProps = state => ({

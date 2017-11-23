@@ -7,7 +7,7 @@ const API_URL = 'http://localhost:3001/api';
 export const postNewCommentRequest = (article_id, comment) => ({
   type: types.POST_NEW_COMMENT_REQUEST,
   payload: {article_id,
-            comment}
+    comment}
 });
   
 export const postNewCommentSuccess = (data) => ({
