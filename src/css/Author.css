@@ -3,30 +3,43 @@
     margin-bottom: 5em;
 }
 
-.author .card-content {
-    background-color: black;
+.author-articles .article {
+    font-family: 'Vollkorn SC', serif;
+    color: black;
+    margin-left:0.5em;
+    font-size: 2em;
+    text-shadow: 8px 8px 9px black;
+    font-size: 1.25em;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+    box-shadow: none;
 }
 
-.author .media-content p {
+.author .hero {
+    background-color: black;
+    padding: 0.5em;
+    background: url('https://s-media-cache-ak0.pinimg.com/originals/19/8f/0c/198f0c6a6d78576cf25a3936225856e3.jpg');
+    background-size: cover;
+    margin-top: 2em;
+}
+
+.author .title {
     font-family: 'Vollkorn SC', serif;
     color: white;
-    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+    font-size: 4em;
+    text-shadow: 2px 2px 4px black;
 }
 
-.author .media-content .description {
-    color: white;
+.author .subtitle {
     font-family: 'Poiret One', cursive;
-    font-size: 1em
+    color: black;
+    font-weight: bold;
 }
 
-.author-articles .article {
-    background-color: white;
-    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
-    padding: 1em;
-    margin-left: 6em;
-    margin-right: 6em;
-    margin-bottom: 5em;
-    box-shadow: none;
-    border: none
+.author .description {
+    font-family: 'Poiret One', cursive;
+    color: black;
+    font-weight: bold;
 }
 

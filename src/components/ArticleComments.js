@@ -38,10 +38,10 @@ class ArticleComments extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='comment-page'>
         <div className='comment-box'>
           <form onSubmit = {this.handleSubmit}>
-            <label>Post something!
+            <label>Have your say!
             </label>
             <br/>
             <input className='input-box' type ='text' onChange= {this.handleChange} value = {this.state.text}/>

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import deleteComment from '../actions/deleteComment';
 import fetchCommentsByArticle from '../actions/fetchCommentsByArticle';
+import '../css/ArticleComments.css';
 
 class SingleComment extends React.Component {
   constructor (props) {
@@ -19,10 +20,8 @@ class SingleComment extends React.Component {
   render() {
     return (
       <div>
-        <h4><Link to={`/users/${this.props.created_by}`}>{this.props.created_by}</Link></h4>
         <div className='tile comment is-child-box'>
-          <h3>{`"${this.props.body}"`}</h3>
-          <br/>
+          <h3>{`"${this.props.body}"`} <Link to={`/users/${this.props.created_by}`}>{this.props.created_by}</Link></h3>
           {(this.props.created_by === 'northcoder') ? <div>
             <button className='delete is-small' onClick={this.removeComment}>X</button></div> :
             <div>

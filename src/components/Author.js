@@ -21,19 +21,14 @@ class User extends React.Component {
           <p>Loading...</p>
         ) : (
           <div className='author'>
-            <div className='card'>
-              <div className="card-content">
-                <div className='media'>
-                  <div className='media-left'>
-                    <figure className="image is-20x20">
-                      <img src={user.avatar_url} alt="avatar" />
-                    </figure>
+            <div className='hero'>
+              <div className="hero-body">
+                <div className='container'>
+                  <div className="title">
+                    {user.name}
                   </div>
-                  <div className="media-content">
-                    <p className="title is-1">{user.name}</p>
-                    <p className="subtitle is-1">{user.username}</p>
+                    <p className="subtitle">{user.username}</p>
                     <p className='description'>{`Take a look at all of ${user.username}'s articles below`}</p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -41,14 +36,14 @@ class User extends React.Component {
               <div className='tile author-articles is-ancestor'>
                 <div className='tile is-6 is-vertical is-parent'>
                   {articles.map(article => (
-                    <div key={article._id}>
+                    <Link to={`/articles/${article._id}`}> <div key={article._id}>
                       {(article.created_by === this.props.match.params.username) ?
                         <div className='tile article is-child box'>
                           <h1>{article.title}</h1>
-                          <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>
+                         
                         </div> : null
                       }
-                    </div>
+                    </div> </Link>
                   ))}
                 </div>
               </div>

@@ -1,16 +1,17 @@
 .comment-card {
-    margin-left: 5em;
     margin-right: 2em;
     margin-top: 2em;
-    margin-bottom: 5em;
-}
-
-.comment-card h3 {
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
+    margin-bottom: 3em;
+    max-height: 27em;
+    overflow-y: auto;
+    width: 100%
 }
 
 .comment {
+    margin-left: 7em;
+}
+
+.comment h3 {
     padding: 1.5em;
 }
 
@@ -18,7 +19,6 @@
     font-family: 'Poiret One', cursive;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
 }
 
 .comment-box{
@@ -31,8 +31,7 @@
     font-family: 'Poiret One', cursive;
     font-weight: bold;
     color: black;
-    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 .input-box {

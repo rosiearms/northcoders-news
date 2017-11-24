@@ -3,18 +3,22 @@
     font-family: 'Vollkorn SC', serif;
     color: white;
     font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+    text-shadow: 4px 4px 3px black;
 }
 
 .card {
     margin: 6em;
-    box-shadow: 0 7.5px 5px #777;
-    border: solid 1px white;
+    box-shadow: 0 7.5px 5px rgba(15, 14, 14, 0.70);
+    background-color: rgba(232, 222, 222, 0.39);
+    overflow-y: auto;
+    max-height: 30em;
 }
 
 .card .title {
     font-size: 1.25em;
     font-family: 'Times New Roman', Times, serif;
+    color: white;
+  
 }
 
 .card .fa-thumbs-up {
@@ -27,4 +31,23 @@
 
 .single-article {
     background-color: black;
+    padding: 0.5em;
+    background: url('https://s-media-cache-ak0.pinimg.com/originals/19/8f/0c/198f0c6a6d78576cf25a3936225856e3.jpg');
+    background-size: cover;
 }
+
+.card-footer-item:not(:last-child) {
+    border-right: none;
+}
+
+span {
+    color: white;
+}
+
+
+
+
+
+
+
+

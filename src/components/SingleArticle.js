@@ -44,16 +44,17 @@ class SingleArticle extends React.Component {
           {loading || articles.length === 0 ? (
             <p>Loading...</p>
           ) : (
-            <div>
+            <div className='article-page'>
               {articles.map(article => (
                 <div key={article._id}>
                   {article._id === id ? (
                     <div className='single-article'>
                       <div className="card">
                         <div className="card-content">
-                          <p className="title">
+                          <p className="title is-marginless">
                             {`“${article.body}”`}
                           </p>
+                          <br/>
                           <p className="subtitle">
                             <Link to={`/users/${article.created_by}`}>{article.created_by}</Link>
                           </p>
