@@ -40,7 +40,6 @@ class SingleArticle extends React.Component {
     const id = this.props.match.params.article_id;
     return (
       <div>
-        <div>
           {error && <Redirect to='/404' />}
           {loading || articles.length === 0 ? (
             <p>Loading...</p>
@@ -124,8 +123,6 @@ class SingleArticle extends React.Component {
                 id={this.props.match.params.article_id} />
             </div>
           )}
-        </div>
-
       </div>
     );
   }

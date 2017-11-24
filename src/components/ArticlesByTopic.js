@@ -23,10 +23,11 @@ class ArticlesByTopic extends React.Component {
               <h1>{this.props.match.params.topic}</h1>
               {articles.map(article => (
                 <div  key={article._id} className='tile is-6 is-parent'>
-                  <div className='tile article is-child box'>
-                    <h1>{article.title}</h1>
-                    <h3><Link to={`/articles/${article._id}`}>Read more...</Link></h3>                  
+                <Link to={`/articles/${article._id}`}>
+                <div className='tile article is-child box'>
+                    <h2>{article.title}</h2>
                   </div>
+                    </Link>                
                 </div>								
               ))}
             </div>

@@ -8,44 +8,49 @@
     flex-wrap: wrap;
     padding: 0 1em;
     list-style: none;
+    background: url('https://dtqnv8in03d1n.cloudfront.net/wp-content/uploads/2017/09/what-is-blogging.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+    max-height: 35em;
 }
 
 .articles h1 {
     font-family: 'Vollkorn SC', serif;
-    color: black;
+    color: white;
     margin-left:0.5em;
-    font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+    font-size: 2.5em;
+    text-shadow: 8px 8px 9px black;
+    font-weight: bold
 }
 
 .articles h2 {
-    font-family: 'Poiret One', cursive;
-    color: black;
-    margin-left:1em;
+    font-family: 'Vollkorn SC', serif;
+    color: white;
+    margin-left:0.5em;
+    text-shadow: 8px 8px 9px black;
+    font-size: 1.25em;
+    font-weight: bold
 }
 
 .article {
-    background-color: white;
-    text-shadow: 2px 2px 4px rgba(195, 32, 32, 0.70);
+    background-color: rgba(38, 37, 37, 0.45);
     padding: 1em;
     margin-left: 6em;
     margin-right: 6em;
     margin-bottom: 5em;
-    box-shadow: 0 7.5px 5px #777;
     border: solid 1px white;
 }
 
 .article:hover {
-    box-shadow: 0 12px 10px #777;
-    margin-bottom: 6em;
+    background-color: rgba(32, 29, 29, 0.85);
 }
 
-.article h1 {
-    font-family: 'Vollkorn SC', serif;
-    font-size: 1em
+
+.articles {
+    background-color: black;
 }
 
-.article h3 {
-    font-family: 'Poiret One', cursive;
-    margin-left: 1em;
+.is-ancestor {
+    padding: 1em
 }
