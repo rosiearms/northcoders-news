@@ -11,6 +11,12 @@
     margin-left: 7em;
 }
 
+@media(max-width: 600px) {
+    .comment {
+        margin: 1em;
+    }   
+}
+
 .comment h3 {
     padding: 1.5em;
 }

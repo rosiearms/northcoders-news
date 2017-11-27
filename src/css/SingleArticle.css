@@ -9,9 +9,17 @@
 .card {
     margin: 6em;
     box-shadow: 0 7.5px 5px rgba(15, 14, 14, 0.70);
-    background-color: rgba(232, 222, 222, 0.39);
+    background-color: rgba(39, 36, 36, 0.39);
     overflow-y: auto;
     max-height: 30em;
+}
+
+@media(max-width: 600px) {
+    .card {
+        margin: 1em;
+        margin-top: 3.5em;
+        max-height: 20em;
+    }
 }
 
 .card .title {

@@ -31,6 +31,18 @@
     text-shadow: 2px 2px 4px black;
 }
 
+.author .hero .container {
+    background-color: rgba(39, 36, 36, 0.39);
+    padding: 1em
+}
+
+.author .title {
+    font-family: 'Vollkorn SC', serif;
+    color: white;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px black;
+}
+
 .author .subtitle {
     font-family: 'Poiret One', cursive;
     color: black;
@@ -42,4 +54,5 @@
     color: black;
     font-weight: bold;
 }
+
 

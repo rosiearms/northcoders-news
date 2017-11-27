@@ -35,24 +35,19 @@ class HomePage extends React.Component {
                   </button>
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                <div class="dropdown-content">
-                <Link to={`/topics/football/articles`} class="dropdown-item">
-        Football
+                  <div class="dropdown-content">
+                    <Link to={`/topics/football/articles`} class="dropdown-item">
+                      Football
       </Link>
-      <Link to={`/topics/cooking/articles`} class="dropdown-item">
-        Cooking
+                    <Link to={`/topics/cooking/articles`} class="dropdown-item">
+                      Cooking
       </Link>
-      <Link to={`/topics/coding/articles`} class="dropdown-item">
-        Coding
+                    <Link to={`/topics/coding/articles`} class="dropdown-item">
+                      Coding
       </Link>
+                  </div>
                 </div>
-                </div>
-
               </div>
-
-
-
-
             </div>
           </div>
         </section>
