@@ -4,10 +4,12 @@ import {Link, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../css/ArticlesByTopic.css';
 import fetchArticlesByTopic from '../actions/fetchArticlesByTopic';
+import fetchArticles from '../actions/fetchArticles';
 
 class ArticlesByTopic extends React.Component {
   componentDidMount() {
     const topicName = this.props.match.params.topic;
+    this.props.fetchArticles();
     this.props.fetchArticlesByTopic(topicName);
   }
   render() {
@@ -54,6 +56,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchArticlesByTopic: (topic) => {
     dispatch(fetchArticlesByTopic(topic));
+  },
+  fetchArticles: () => {
+    dispatch(fetchArticles());
   }
 });
 

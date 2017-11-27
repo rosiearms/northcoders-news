@@ -135,7 +135,7 @@ SingleArticle.propTypes = {
   error: PT.any,
   fetchArticles: PT.func.isRequired,
   alterArticleVote: PT.func.isRequired,
-  match: PT.string.isRequired
+  match: PT.object.isRequired
 };
 
 const mapStateToProps = state => ({

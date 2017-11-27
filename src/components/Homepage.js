@@ -14,7 +14,7 @@ class HomePage extends React.Component {
                 NORTHCODERS NEWS
               </h1>
               <h2 className="subtitle">
-                Welcome to Northcoders very own blog site! Have a browse through our articles and user comments. If you have something to say about them make sure you post your own comment or just make a vote. Also, if you like what a user is writing, click on their username to see all the articles they have written. Enjoy!
+                Welcome to Northcoders very own blog site! Have a browse through our articles... vote, comment and enjoy!
               </h2>
             </div>
           </div>
