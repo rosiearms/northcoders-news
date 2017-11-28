@@ -6,7 +6,7 @@
     text-shadow: 4px 4px 3px black;
 }
 
-.card {
+.single-article .card {
     margin: 6em;
     box-shadow: 0 7.5px 5px rgba(15, 14, 14, 0.70);
     background-color: rgba(39, 36, 36, 0.39);
@@ -15,14 +15,14 @@
 }
 
 @media(max-width: 600px) {
-    .card {
+    .single-article .card {
         margin: 1em;
         margin-top: 3.5em;
         max-height: 20em;
     }
 }
 
-.card .title {
+.single-article .card .title {
     font-size: 1.25em;
     font-family: 'Times New Roman', Times, serif;
     color: white;
@@ -44,15 +44,13 @@
     background-size: cover;
 }
 
-.card-footer-item:not(:last-child) {
+.single-article .card-footer-item:not(:last-child) {
     border-right: none;
 }
 
-span {
+.single-article span {
     color: white;
 }
-
-
 
 
 

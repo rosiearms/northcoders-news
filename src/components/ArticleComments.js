@@ -49,10 +49,10 @@ class ArticleComments extends React.Component {
           </form>
         </div>
         <div className='comment-card'>
-          <div className='tile is-ancestor is-vertical'>
             {this.props.comments.map((comment, i) => (
-              <div className='tile is-7 is parent' key={i}>
+              <div key={i}>
                 <Comment
+                  comment_votes={comment.votes}
                   comment_id={comment._id}
                   created_by={comment.created_by}
                   body={comment.body}
@@ -62,7 +62,6 @@ class ArticleComments extends React.Component {
             ))}
           </div>
         </div>
-      </div>
     );
   }
 }
@@ -71,7 +70,7 @@ ArticleComments.propTypes = {
   comments: PT.array.isRequired,
   error: PT.any,
   fetchCommentsByArticle: PT.func.isRequired,
-  id: PT.number.isRequired,
+  id: PT.string.isRequired,
   postNewComment: PT.func.isRequired
 
 };

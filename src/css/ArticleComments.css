@@ -7,28 +7,17 @@
     width: 100%
 }
 
-.comment {
-    margin-left: 7em;
+.comment-card .card-content{
+    background-color: white;
+    padding: 0.5em;
 }
 
-@media(max-width: 600px) {
-    .comment {
-        margin: 1em;
-    }   
-}
-
-.comment h3 {
-    padding: 1.5em;
-}
-
-.comment-card h4 {
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
-    color: white;
+.comment{
+    margin: 1em;
 }
 
 .comment-box{
-    margin-left: 5em;
+    margin-left: 2em;
     margin-right: 2em;
     margin-top: 2em;
 }
@@ -42,4 +31,12 @@
 
 .input-box {
     height: 2.6em;
+}
+
+.comment .card-footer{
+    color: black;
+}
+
+.comment .card-footer-item{
+    border: none;
 }
