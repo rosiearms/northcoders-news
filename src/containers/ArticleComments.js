@@ -3,7 +3,7 @@ import PT from 'prop-types';
 import { connect } from 'react-redux';
 import fetchCommentsByArticle from '../actions/fetchCommentsByArticle';
 import postNewComment from '../actions/postNewComment';
-import Comment from './Comment';
+import SingleComment from './SingleComment';
 import '../css/ArticleComments.css';
 
 class ArticleComments extends React.Component {
@@ -51,7 +51,7 @@ class ArticleComments extends React.Component {
         <div className='comment-card'>
             {this.props.comments.map((comment, i) => (
               <div key={i}>
-                <Comment
+                <SingleComment
                   comment_votes={comment.votes}
                   comment_id={comment._id}
                   created_by={comment.created_by}

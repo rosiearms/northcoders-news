@@ -36,7 +36,7 @@ class User extends React.Component {
               <div className='tile author-articles is-ancestor'>
                 <div className='tile is-6 is-vertical is-parent'>
                   {articles.map(article => (
-                    <Link to={`/articles/${article._id}`}> <div key={article._id}>
+                    <Link key={article._id} to={`/articles/${article._id}`}> <div key={article._id}>
                       {(article.created_by === this.props.match.params.username) ?
                         <div className='tile article is-child box'>
                           <h1>{article.title}</h1>
