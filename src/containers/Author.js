@@ -27,8 +27,8 @@ class User extends React.Component {
                   <div className="title">
                     {user.name}
                   </div>
-                    <p className="subtitle">{user.username}</p>
-                    <p className='description'>{`Take a look at all of ${user.username}'s articles below`}</p>
+                  <p className="subtitle">{user.username}</p>
+                  <p className='description'>{`Take a look at all of ${user.username}'s articles below`}</p>
                 </div>
               </div>
             </div>

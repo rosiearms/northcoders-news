@@ -25,11 +25,11 @@ class ArticlesByTopic extends React.Component {
               <h1>{this.props.match.params.topic}</h1>
               {articles.map(article => (
                 <div  key={article._id} className='tile is-6 is-parent'>
-                <Link to={`/articles/${article._id}`}>
-                <div className='tile article is-child box'>
-                    <h2>{article.title}</h2>
-                  </div>
-                    </Link>                
+                  <Link to={`/articles/${article._id}`}>
+                    <div className='tile article is-child box'>
+                      <h2>{article.title}</h2>
+                    </div>
+                  </Link>                
                 </div>								
               ))}
             </div>
@@ -44,13 +44,14 @@ ArticlesByTopic.propTypes = {
   loading: PT.bool.isRequired,
   error: PT.any,
   fetchArticlesByTopic: PT.func.isRequired,
+  fetchArticles: PT.func.isRequired,
   match: PT.string.isRequired
 };
 
 const mapStateToProps = state => ({
-  articles: state.fetchArticlesByTopicReducer.data,
-  loading: state.fetchArticlesByTopicReducer.loading,
-  error: state.fetchArticlesByTopicReducer.error
+  articles: state.ArticlesReducer.data,
+  loading: state.ArticlesReducer.loading,
+  error: state.ArticlesReducer.error
 });
 
 const mapDispatchToProps = dispatch => ({

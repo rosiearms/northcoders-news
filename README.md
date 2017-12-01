@@ -20,14 +20,14 @@ This will tell you which version you are currently running. If you do not have i
 
 - To clone the project and install dependencies, open a terminal and navigate to the folder where you wish to save the project. Run the following command:
 
-git clone https://github.com/rosiearms/northcoders-news
+```git clone https://github.com/rosiearms/northcoders-news```
 
 To install all project dependencies, navigate into the new folder and run:
 
 ```npm install```
 
-Finally, open another terminal, navigate to the front-end project folder, make sure you are in the folder entitles my-app. If you aren't, navigate into it with:
-
+Finally, open another terminal, navigate to the front-end project folder, make sure you are in the folder entitled my-app. If you aren't, navigate into it with:
+    
 ```cd my-app```
 
 - Once you are in this folder run:

@@ -18,6 +18,10 @@ class SingleArticle extends React.Component {
     this.decrementVote = this.decrementVote.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchArticles();
+  }
+
   incrementVote() {
     const id = this.props.match.params.article_id;
     this.props.alterArticleVote(id, 'up');
@@ -38,6 +42,7 @@ class SingleArticle extends React.Component {
   render() {
     return (
       <div>
+        {console.log(this.props.articles)}
         <SingleArticleUI
           articles={this.props.articles}
           loading={this.props.loading}
@@ -65,9 +70,9 @@ SingleArticle.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  articles: state.fetchArticlesReducer.data,
-  loading: state.fetchArticlesReducer.loading,
-  error: state.fetchArticlesReducer.error
+  articles: state.ArticlesReducer.data,
+  loading: state.ArticlesReducer.loading,
+  error: state.ArticlesReducer.error
 });
 
 const mapDispatchToProps = dispatch => ({
