@@ -28,7 +28,7 @@ const SingleCommentUI = ({ body, created_by, comment_votes, start_vote, voted, i
               <p className="card-footer-item">
                 <span>
                   Thanks for voting!
-            </span>
+                </span>
               </p>
             </div>
           }

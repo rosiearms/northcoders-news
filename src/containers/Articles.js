@@ -21,10 +21,10 @@ class Articles extends React.Component {
             <div className='tile is-ancestor is-vertical'>
               {articles.map(article => (
                 <div key={article._id} className='tile is-6 is-parent'>
-                <Link to={`/articles/${article._id}`}>
-                <div className='tile article is-child box'>
-                    <h2>{article.title}</h2>
-                  </div>
+                  <Link to={`/articles/${article._id}`}>
+                    <div className='tile article is-child box'>
+                      <h2>{article.title}</h2>
+                    </div>
                   </Link>
                 </div>
               ))}

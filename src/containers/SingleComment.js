@@ -13,7 +13,7 @@ class SingleComment extends React.Component {
     this.state = {
       votes: 0,
       voted: false
-    }
+    };
     this.removeComment = this.removeComment.bind(this);
     this.incrementVote = this.incrementVote.bind(this);
     this.decrementVote = this.decrementVote.bind(this);
@@ -46,14 +46,14 @@ class SingleComment extends React.Component {
     return (
       <div>
         <SingleCommentUI
-        body={this.props.body}
-        created_by={this.props.created_by}
-        comment_votes={this.props.comment_votes}
-        start_vote={this.state.votes}
-        voted={this.state.voted}
-        incrementVote={this.incrementVote}
-        decrementVote={this.decrementVote}
-        removeComment={this.removeComment}
+          body={this.props.body}
+          created_by={this.props.created_by}
+          comment_votes={this.props.comment_votes}
+          start_vote={this.state.votes}
+          voted={this.state.voted}
+          incrementVote={this.incrementVote}
+          decrementVote={this.decrementVote}
+          removeComment={this.removeComment}
         />
       </div>
     );
@@ -67,7 +67,9 @@ SingleComment.propTypes = {
   fetchCommentsByArticle: PT.func.isRequired,
   article_id: PT.string.isRequired,
   created_by: PT.string.isRequired,
-  body: PT.string.isRequired
+  body: PT.string.isRequired,
+  alterCommentVote: PT.func.isRequired,
+  comment_votes: PT.number.isRequired
 };
 
 const mapStateToProps = state => ({

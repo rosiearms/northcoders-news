@@ -49,19 +49,19 @@ class ArticleComments extends React.Component {
           </form>
         </div>
         <div className='comment-card'>
-            {this.props.comments.map((comment, i) => (
-              <div key={i}>
-                <SingleComment
-                  comment_votes={comment.votes}
-                  comment_id={comment._id}
-                  created_by={comment.created_by}
-                  body={comment.body}
-                  article_id={this.props.id} />
+          {this.props.comments.map((comment, i) => (
+            <div key={i}>
+              <SingleComment
+                comment_votes={comment.votes}
+                comment_id={comment._id}
+                created_by={comment.created_by}
+                body={comment.body}
+                article_id={this.props.id} />
             
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+      </div>
     );
   }
 }
