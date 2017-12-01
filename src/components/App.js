@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Homepage from './Homepage';
-import ArticlesByTopic from './ArticlesByTopic';
-import Articles from './Articles';
-import ArticleComments from './ArticleComments';
-import Author from './Author';
-import SingleArticle from './SingleArticle';
+import ArticlesByTopic from '../containers/ArticlesByTopic';
+import Articles from '../containers/Articles';
+import ArticleComments from '../containers/ArticleComments';
+import Author from '../containers/Author';
+import SingleArticle from '../containers/SingleArticle';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ErrorPage from './ErrorPage';

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import 'bulma/css/bulma.css';
 
-import App from './containers/App';
+import App from './components/App';
 
 import store from './store';
 
