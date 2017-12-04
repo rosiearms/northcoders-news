@@ -25,10 +25,10 @@ class User extends React.Component {
               <div className="hero-body">
                 <div className='container'>
                   <div className="title">
-                    {user.name}
+                    {user.profileData[0].name}
                   </div>
-                  <p className="subtitle">{user.username}</p>
-                  <p className='description'>{`Take a look at all of ${user.username}'s articles below`}</p>
+                  <p className="subtitle">{user.profileData[0].username}</p>
+                  <p className='description'>{`Take a look at all of ${user.profileData[0].username}'s articles below`}</p>
                 </div>
               </div>
             </div>
