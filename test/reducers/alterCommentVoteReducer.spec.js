@@ -20,7 +20,7 @@ describe('reducer', () => {
       expect(newState).to.eql({
         loading: false,
         error: null,
-        data: []
+        data: 0
       });
     });
   });
@@ -30,7 +30,7 @@ describe('reducer', () => {
       const newState = alterCommentVoteReducer(undefined, action);
       expect(newState.loading).to.be.true;
       expect(newState.error).to.be.null;
-      expect(newState.data).to.eql([]);
+      expect(newState.data).to.eql(0);
     });
     it('handles ALTER_COMMENT_VOTE_SUCCESS', () => {
       const prevState = alterCommentVoteReducer(undefined, alterCommentVoteRequest());
@@ -49,8 +49,8 @@ describe('reducer', () => {
       const newState = alterCommentVoteReducer(prevState, action);
       expect(newState.loading).to.be.false;
       expect(newState.error).to.eql(error);
-      expect(newState.data).to.eql([]);
-      expect(newState.data).to.not.equal(prevState.data);
+      expect(newState.data).to.eql(0);
+      expect(newState).to.not.equal(prevState);
     });
   });
 });

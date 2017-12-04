@@ -3,7 +3,7 @@ import * as types from '../actions/types';
 export const initialState = {
   loading: false,
   error: null,
-  data: []
+  data: 0
 };
 
 export default (prevState = initialState, action) => {
@@ -12,7 +12,7 @@ export default (prevState = initialState, action) => {
     return Object.assign({}, prevState, {
       loading: !prevState.loading,
       error: null,
-      data: []
+      data: 0
     });
   case types.ALTER_COMMENT_VOTE_SUCCESS:
     return Object.assign({}, prevState, {
@@ -24,7 +24,7 @@ export default (prevState = initialState, action) => {
     return Object.assign({}, prevState, {
       loading: false,
       error: action.payload,
-      data: []
+      data: 0
     });
   default:
     return prevState;
