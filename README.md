@@ -10,11 +10,11 @@ This repo contains all the front-end code for this project. First make sure you 
 
 # System Setup
 
-- Make sure you have node installed.
+- Make sure you have installed version 8.3 or above of node.
 
 ```node -v```
 
-This will tell you which version you are currently running. If you do not have it installed already please refer to the documentation found here: https://nodejs.org/en/download/
+This will tell you which version you are currently running. If you do not have it installed already or need to update it please refer to the documentation found here: https://nodejs.org/en/download/
 
 # Project setup
 
@@ -26,7 +26,7 @@ To install all project dependencies, navigate into the new folder and run:
 
 ```npm install```
 
-Finally, open another terminal, navigate to the front-end project folder, make sure you are in the folder entitles my-app. If you aren't, navigate into it with:
+Finally, open another terminal, navigate to the front-end project folder, make sure you are in the folder entitled my-app. If you aren't, navigate into it with:
 
 ```cd my-app```
 
