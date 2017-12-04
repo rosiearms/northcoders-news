@@ -40,6 +40,7 @@ describe('reducer', () => {
       expect(newState.loading).to.be.false;
       expect(newState.error).to.be.null;
       expect(newState.data).to.eql(data);
+      expect(newState.data).to.not.equal(prevState.data);
     });
     it('handles FETCH_ARTICLES_BY_TOPIC_FAILURE', () => {
       const prevState = fetchArticlesByTopicReducer(undefined, fetchArticlesByTopicRequest());
@@ -49,6 +50,7 @@ describe('reducer', () => {
       expect(newState.loading).to.be.false;
       expect(newState.error).to.eql(error);
       expect(newState.data).to.eql([]);
+      expect(newState.data).to.not.equal(prevState.data);
     });
   });
 });

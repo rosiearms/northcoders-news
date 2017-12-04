@@ -40,6 +40,7 @@ describe('reducer', () => {
       expect(newState.loading).to.be.false;
       expect(newState.error).to.be.null;
       expect(newState.data).to.eql(data);
+      expect(newState.data).to.not.equal(prevState.data);
     });
     it('handles FETCH_TOPICS_FAILURE', () => {
       const prevState = fetchTopicsReducer(undefined, fetchTopicsRequest());
@@ -49,6 +50,7 @@ describe('reducer', () => {
       expect(newState.loading).to.be.false;
       expect(newState.error).to.eql(error);
       expect(newState.data).to.eql([]);
+      expect(newState.data).to.not.equal(prevState.data);
     });
   });
 });
