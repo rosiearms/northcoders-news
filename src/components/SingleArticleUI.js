@@ -2,16 +2,10 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import PT from 'prop-types';
 
-const SingleArticleUI = ({ articles, loading, error, id, start_vote, voted, incrementVote, decrementVote }) => (
+const SingleArticleUI = ({ article, error, start_vote, voted, incrementVote, decrementVote }) => (
   <div>
     {error && <Redirect to='/404' />}
-    {loading || articles.length === 0 ? (
-      <p>Loading...</p>
-    ) : (
       <div className='article-page'>
-        {articles.map(article => (
-          <div key={article._id}>
-            {article._id === id ? (
               <div className='single-article'>
                 <div className="card">
                   <div className="card-content">
@@ -81,9 +75,7 @@ const SingleArticleUI = ({ articles, loading, error, id, start_vote, voted, incr
                     </p>
                   </footer>
                 </div>
-              </div>) : ''}
-          </div>
-        ))}
+              </div>
       </div>
     )}
   </div>

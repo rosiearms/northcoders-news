@@ -1,7 +1,7 @@
 import React from 'react';
 import PT from 'prop-types';
 import { connect } from 'react-redux';
-import fetchArticles from '../actions/fetchArticles';
+import fetchSingleArticle from '../actions/fetchSingleArticle';
 import alterArticleVote from '../actions/alterArticleVote';
 import SingleArticleUI from '../components/SingleArticleUI';
 import ArticleComments from './ArticleComments';
@@ -19,7 +19,8 @@ class SingleArticle extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchArticles();
+    let id = this.props.match.params.article_id;
+    this.props.fetchSingleArticle(id);
   }
 
   incrementVote() {
@@ -43,10 +44,8 @@ class SingleArticle extends React.Component {
     return (
       <div>
         <SingleArticleUI
-          articles={this.props.articles}
-          loading={this.props.loading}
+          article={this.props.article}
           error={this.props.error}
-          id={this.props.match.params.article_id}
           start_vote={this.state.votes}
           voted={this.state.voted}
           incrementVote={this.incrementVote}
@@ -60,23 +59,23 @@ class SingleArticle extends React.Component {
 }
 
 SingleArticle.propTypes = {
-  articles: PT.array.isRequired,
+  article: PT.object.isRequired,
   loading: PT.bool.isRequired,
   error: PT.any,
-  fetchArticles: PT.func.isRequired,
+  fetchSingleArticle: PT.func.isRequired,
   alterArticleVote: PT.func.isRequired,
   match: PT.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  articles: state.fetchArticlesReducer.data,
-  loading: state.fetchArticlesReducer.loading,
-  error: state.fetchArticlesReducer.error
+  article: state.fetchSingleArticleReducer.data,
+  loading: state.fetchSingleArticleReducer.loading,
+  error: state.fetchSingleArticleReducer.error
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchArticles: () => {
-    dispatch(fetchArticles());
+  fetchSingleArticle: (id) => {
+    dispatch(fetchSingleArticle(id));
   },
   alterArticleVote: (id, vote) => {
     dispatch(alterArticleVote(id, vote));
