@@ -82,7 +82,7 @@ const SingleArticleUI = ({ article, error, start_vote, voted, incrementVote, dec
 );
 
 SingleArticleUI.propTypes = {
-  articles: PT.array.isRequired,
+  article: PT.object.isRequired,
   loading: PT.bool.isRequired,
   error: PT.any,
   id: PT.string.isRequired,

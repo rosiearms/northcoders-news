@@ -11,6 +11,7 @@ class Articles extends React.Component {
   }
   render() {
     const { articles, loading, error } = this.props;
+    console.log(articles);
     return (
       <div className='articles'>
         {error && <Redirect to='/404' />}
@@ -44,9 +45,9 @@ Articles.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  articles: state.fetchArticlesReducer.data,
-  loading: state.fetchArticlesReducer.loading,
-  error: state.fetchArticlesReducer.error
+  articles: state.ArticlesReducer.data,
+  loading: state.ArticlesReducer.loading,
+  error: state.ArticlesReducer.error
 });
 
 const mapDispatchToProps = dispatch => ({

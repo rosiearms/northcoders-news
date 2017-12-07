@@ -68,9 +68,9 @@ SingleArticle.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  article: state.fetchSingleArticleReducer.data,
-  loading: state.fetchSingleArticleReducer.loading,
-  error: state.fetchSingleArticleReducer.error
+  article: state.ArticlesReducer.data,
+  loading: state.ArticlesReducer.loading,
+  error: state.ArticlesReducer.error
 });
 
 const mapDispatchToProps = dispatch => ({

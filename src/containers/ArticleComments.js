@@ -15,6 +15,7 @@ class ArticleComments extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  
   componentDidMount() {
     const id = this.props.id;
     this.props.fetchCommentsByArticle(id);
