@@ -27,7 +27,7 @@ class SingleArticle extends React.Component {
     const id = this.props.match.params.article_id;
     this.props.alterArticleVote(id, 'up');
     this.setState({
-      votes: this.state.votes + 1,
+      votes: this.state.votes,
       voted: true
     });
   }
@@ -36,7 +36,7 @@ class SingleArticle extends React.Component {
     const id = this.props.match.params.article_id;
     this.props.alterArticleVote(id, 'down');
     this.setState({
-      votes: this.state.votes - 1,
+      votes: this.state.votes,
       voted: true
     });
   }
@@ -68,9 +68,9 @@ SingleArticle.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  article: state.ArticlesReducer.data,
-  loading: state.ArticlesReducer.loading,
-  error: state.ArticlesReducer.error
+  article: state.ArticleReducer.data,
+  loading: state.ArticleReducer.loading,
+  error: state.ArticleReducer.error
 });
 
 const mapDispatchToProps = dispatch => ({
