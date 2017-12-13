@@ -77,7 +77,6 @@ const SingleArticleUI = ({ article, error, start_vote, voted, incrementVote, dec
                 </div>
               </div>
       </div>
-    )}
   </div>
 );
 

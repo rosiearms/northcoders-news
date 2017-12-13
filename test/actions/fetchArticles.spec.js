@@ -7,7 +7,6 @@ import fetchArticles, {
   fetchArticlesRequest, fetchArticlesSuccess, fetchArticlesFailure
 } from '../../src/actions/fetchArticles';
 
-// const API_URL = 'https://northcoders-news-api.herokuapp.com/api';
 const API_URL = 'http://localhost:3001/api';
 
 const mockStore = configureMockStore([thunk]);
