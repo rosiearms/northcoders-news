@@ -9,9 +9,9 @@ class Articles extends React.Component {
   componentDidMount() {
     this.props.fetchArticles();
   }
+
   render() {
     const { articles, loading, error } = this.props;
-    console.log(articles);
     return (
       <div className='articles'>
         {error && <Redirect to='/404' />}

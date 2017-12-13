@@ -26,7 +26,7 @@ export default (prevState = initialState, action) => {
       error: action.payload,
       data: []
     });
-    case types.ALTER_ARTICLE_VOTE_REQUEST:
+  case types.ALTER_ARTICLE_VOTE_REQUEST:
     return Object.assign({}, prevState, {
       loading: !prevState.loading,
       error: null,

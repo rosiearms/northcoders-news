@@ -26,7 +26,7 @@ export default (prevState = initialState, action) => {
       error: action.payload,
       data: []
     });
-    case types.FETCH_ARTICLES_BY_TOPIC_REQUEST:
+  case types.FETCH_ARTICLES_BY_TOPIC_REQUEST:
     return Object.assign({}, prevState, {
       loading: !prevState.loading,
       error: null,
