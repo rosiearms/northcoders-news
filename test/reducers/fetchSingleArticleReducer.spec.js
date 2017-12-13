@@ -6,7 +6,7 @@ import {
   fetchSingleArticleFailure
 } from '../../src/actions/fetchSingleArticle';
 
-describe.only('reducer', () => {
+describe('reducer', () => {
   describe('default behaviour', () => {
     it('returns the passed previous state if an unrecognised action is passed', () => {
       const prevState = false;
