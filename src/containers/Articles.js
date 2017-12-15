@@ -44,9 +44,9 @@ Articles.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  articles: state.fetchArticlesReducer.data,
-  loading: state.fetchArticlesReducer.loading,
-  error: state.fetchArticlesReducer.error
+  articles: state.ArticlesReducer.data,
+  loading: state.ArticlesReducer.loading,
+  error: state.ArticlesReducer.error
 });
 
 const mapDispatchToProps = dispatch => ({
