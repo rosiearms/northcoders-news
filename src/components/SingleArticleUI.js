@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import PT from 'prop-types';
 
-const SingleArticleUI = ({ article, error, start_vote, voted, incrementVote, decrementVote }) => (
+const SingleArticleUI = ({ article, error, voted, incrementVote, decrementVote }) => (
   <div>
     {error && <Redirect to='/404' />}
     <div className='article-page'>
@@ -20,7 +20,7 @@ const SingleArticleUI = ({ article, error, start_vote, voted, incrementVote, dec
           <footer className="card-footer">
             <p className="card-footer-item">
               <span>
-                          RATING: {article.votes + start_vote}
+                          RATING: {article.votes}
               </span>
             </p>
             {(voted === false) ?
