@@ -78,9 +78,9 @@ ArticleComments.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    comments: state.fetchCommentsByArticleReducer.data,
-    loading: state.fetchCommentsByArticleReducer.loading,
-    error: state.fetchCommentsByArticleReducer.error
+    comments: state.CommentsReducer.data,
+    loading: state.CommentsReducer.loading,
+    error: state.CommentsReducer.error
   };
 };
 
