@@ -4,7 +4,9 @@ A reddit-like blog site, built using React, Redux, Bulma and Axios.
 
 Northcoders News has articles which are divided into topics. Each article has user curated ratings and can be up or down voted. Users can add comments about an article. Any comments you post from your app will automatically be given the username 'northcoder'. You can delete your own comments (but not anyone else's!)
 
-You can run this project locally by following the installation and setup instructions below.
+you can view the hosted project here: https://ncnewsra.herokuapp.com/ (make sure you have the back end database running before loading this page, please see link below).
+
+Alternatively, You can run this project locally by following the installation and setup instructions below.
 
 This repo contains all the front-end code for this project. First make sure you have followed the instructions to connect to the database, the back-end code for this setup can be found here: https://github.com/rosiearms/BE-northcoders-news
 
