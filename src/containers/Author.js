@@ -66,7 +66,7 @@ User.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  articles: state.fetchArticlesReducer.data,
+  articles: state.ArticlesReducer.data,
   user: state.UserReducer.data,
   loading: state.UserReducer.loading,
   error: state.UserReducer.error

@@ -6,12 +6,11 @@
 .author-articles .article {
     font-family: 'Vollkorn SC', serif;
     color: black;
-    margin-left:0.5em;
+    margin:0.5em;
     font-size: 2em;
     text-shadow: 8px 8px 9px black;
     font-size: 1.25em;
     font-weight: bold;
-    border: none;
     background-color: white;
     box-shadow: none;
 }
@@ -36,23 +35,20 @@
     padding: 1em
 }
 
-.author .title {
-    font-family: 'Vollkorn SC', serif;
-    color: white;
-    font-size: 4em;
-    text-shadow: 2px 2px 4px black;
-}
-
 .author .subtitle {
     font-family: 'Poiret One', cursive;
     color: black;
     font-weight: bold;
+    text-shadow: 2px 2px 4px white;
+    font-size: 1.5em;
 }
 
 .author .description {
     font-family: 'Poiret One', cursive;
     color: black;
     font-weight: bold;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px white;
 }
 
 
