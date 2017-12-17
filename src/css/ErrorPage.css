@@ -1,9 +1,14 @@
+body .ErrorPage {
+    background-color: black;
+}
+
 .ErrorPage{
     text-align: center;
 }
 
 .ErrorPage h1 {
     color: white;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
+    background-color: black;
 }
